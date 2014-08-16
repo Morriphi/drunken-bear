@@ -1,11 +1,22 @@
-<html>
-  <head>
-    <title>index.html</title>
-    <link href="./style.css" rel="stylesheet"></link>
-  </head>
-  <body>
-    <h1>A Drunk Bear</h1>
-    <img src="drunkbear.JPG" alt="drunk bear" />
-  <script src="./bower_components/angular/angular.min.js" type="application/javascript" />
-  </body>
+<!DOCTYPE html>
+<html lang="en" ng-app="app" class="no-js">
+<head>
+    <title>My AngularJS App</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+</head>
+<body class="list-group" ng-controller="StoreController as store">
+
+<section ng-controller="TabController as tab">
+    <div class="list-group-item" ng-repeat="product in store.products" ng-click="tab.setTab(product.index)">
+        <product product="product"></product>
+    </div>
+    <div class="list-group-item">
+        <product product="tab.selectedProduct"></product>
+        <p>{{tab.selectedProduct.desc}}</p>
+    </div>
+</section>
+
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="client.js"></script>
+</body>
 </html>
