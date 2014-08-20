@@ -1,1 +1,2 @@
-node ./server.js &
+#!/bin/sh
+nohup nodejs ./server.js &
