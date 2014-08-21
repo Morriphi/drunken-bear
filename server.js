@@ -5,7 +5,7 @@
   var server = http.createServer();
 
   server.on('request', function(req, res){
-    send(req, req.url, {root: './'})
+    send(req, req.url, {root: '/drunken-bear/'})
         .on('error', function(err){
             serveErrorFile(res, err.status, err.status + '.html');
         })

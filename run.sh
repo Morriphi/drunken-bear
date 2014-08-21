@@ -1,1 +1,2 @@
-node ./server.js &
+#!/bin/sh
+nodejs /drunken-bear/server.js &
